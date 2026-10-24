@@ -1,0 +1,85 @@
+/* Vier Themes – jeweils mit Bild (data-bg="scene"/"photo") oder nur Farben (data-bg="none").
+   Mit Bild werden Flächen halbtransparent + Unschärfe, damit die Szene durchscheint. */
+
+body {
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --radius: 16px;
+  --st1: #ffb224; --st2: #30d158; --st4: #ffd23f;
+  --on-acc: #111;
+}
+
+/* ---------- Street: Beton, Nacht, Neon ---------- */
+body[data-theme="street"] {
+  --bg: #0d0f1a; --text: #f1f1f5; --muted: #9aa0b4; --line: #2e3248;
+  --surface: #171a2a; --surface2: #20243a; --input: #11131f; --sheet: #151827; --bar: #0d0f1aee;
+  --acc: #ff3d7f; --acc2: #3dffb4; --on-acc: #fff;
+  --font-head: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; --head-ls: .05em; --head-w: 400;
+  --toast: #f1f1f5; --toast-text: #0d0f1a;
+  --shadow: 0 6px 20px #0005; --btn-shadow: 0 0 16px #ff3d7f55;
+  --shade: linear-gradient(#0d0f1a99, #0d0f1a55 40%, #0d0f1acc);
+  --pattern: repeating-linear-gradient(115deg, #ffffff05 0 2px, transparent 2px 9px), radial-gradient(circle at 80% 0%, #ff3d7f22, transparent 50%), radial-gradient(circle at 0% 100%, #3dffb41a, transparent 50%);
+}
+body[data-theme="street"] h1 { text-shadow: 0 0 18px #ff3d7f88; }
+
+/* ---------- Sunset Bowl: Kalifornien, 70er ---------- */
+body[data-theme="sunset"] {
+  --bg: #2a1030; --text: #fff4e6; --muted: #e3b9b0; --line: #6d3a5a;
+  --surface: #3e1838; --surface2: #4e2144; --input: #2a1030; --sheet: #3a1636; --bar: #2a1030ee;
+  --acc: #ff8c42; --acc2: #ffd23f; --on-acc: #2a1030;
+  --font-head: 'Shrikhand', 'Cooper Black', Georgia, serif; --head-ls: .01em; --head-w: 400;
+  --radius: 22px; --btn-radius: 999px;
+  --toast: #ffd23f; --toast-text: #2a1030;
+  --shadow: 0 6px 18px #1a061e66;
+  --shade: linear-gradient(#2a103066, transparent 35%, #2a1030bb);
+  --pattern: repeating-linear-gradient(180deg, #ff8c4212 0 14px, #ffd23f0c 14px 28px, #ff5d8f10 28px 42px, transparent 42px 90px);
+}
+body[data-theme="sunset"] h1 { color: var(--acc2); text-shadow: 3px 3px 0 #b8336a; }
+
+/* ---------- DIY: unter der Brücke ---------- */
+body[data-theme="diy"] {
+  --bg: #2b2c30; --text: #f2efe8; --muted: #b3b1aa; --line: #4b4c52;
+  --surface: #36373c; --surface2: #414248; --input: #2b2c30; --sheet: #333439; --bar: #2b2c30ee;
+  --acc: #ffd23f; --acc2: #3dffb4; --on-acc: #1b1b1d;
+  --font-head: 'Permanent Marker', 'Comic Sans MS', cursive; --head-ls: .01em; --head-w: 400;
+  --radius: 6px; --btn-radius: 4px;
+  --toast: #ffd23f; --toast-text: #1b1b1d;
+  --shadow: 3px 3px 0 #0006; --btn-shadow: 3px 3px 0 #000a;
+  --shade: linear-gradient(#1b1b1d77, transparent 40%, #1b1b1daa);
+  --pattern: radial-gradient(#ffffff08 1px, transparent 1.5px) 0 0 / 7px 7px, radial-gradient(#00000030 1px, transparent 1.5px) 3px 4px / 9px 9px;
+}
+body[data-theme="diy"] .card, body[data-theme="diy"] .view-head, body[data-theme="diy"] .post { border-width: 2px; }
+body[data-theme="diy"] h1 { transform: rotate(-1.5deg); display: inline-block; }
+body[data-theme="diy"] .btn:not(.ghost) { border: 2px solid #1b1b1d; }
+
+/* ---------- Retro 80s / VHS ---------- */
+body[data-theme="retro"] {
+  --bg: #0d0221; --text: #f5e9ff; --muted: #b59ad8; --line: #3d1f6b;
+  --surface: #1a0835; --surface2: #251048; --input: #12042a; --sheet: #170730; --bar: #0d0221ee;
+  --acc: #ff2bd6; --acc2: #00f0ff; --on-acc: #fff;
+  --font-head: 'Press Start 2P', 'Courier New', monospace; --head-ls: 0; --head-w: 400;
+  --radius: 4px; --btn-radius: 2px;
+  --toast: #00f0ff; --toast-text: #0d0221;
+  --shadow: 0 0 0 1px #ff2bd633, 0 0 16px #ff2bd622; --btn-shadow: 0 0 12px #ff2bd699;
+  --shade: linear-gradient(#0d022188, transparent 40%, #0d0221cc);
+  --pattern: linear-gradient(#ff2bd618 1px, transparent 1px) 0 0 / 100% 26px, linear-gradient(90deg, #ff2bd618 1px, transparent 1px) 0 0 / 26px 100%;
+}
+body[data-theme="retro"] h1 { font-size: 20px; line-height: 1.4; color: var(--acc2); text-shadow: 2px 2px 0 var(--acc); }
+body[data-theme="retro"] h2 { font-size: 13px; line-height: 1.5; }
+body[data-theme="retro"] h3, body[data-theme="retro"] .group { font-size: 11px; }
+body[data-theme="retro"] .post-trick, body[data-theme="retro"] .roulette, body[data-theme="retro"] .stat b, body[data-theme="retro"] .counter b { font-size: 13px; }
+body[data-theme="retro"] .roulette .win { font-size: 15px; }
+body[data-theme="retro"] .letters i { font-size: 11px; }
+body[data-theme="retro"] .sk-p .letters i { font-size: 14px; }
+body[data-theme="retro"] .logo h1 { font-size: 26px; }
+body[data-theme="retro"]::after {   /* VHS-Scanlines */
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 80;
+  background: repeating-linear-gradient(#0000 0 2px, #0000001f 2px 3px); mix-blend-mode: multiply;
+}
+
+/* ---------- Mit Hintergrundbild: Glas-Flächen ---------- */
+body:not([data-bg="none"]) {
+  --blur: 14px;
+  --surface: color-mix(in srgb, var(--bg) 84%, transparent);
+  --surface-head: color-mix(in srgb, var(--bg) 76%, transparent);
+}
+body:not([data-bg="none"]) #main .view-head { box-shadow: none; }

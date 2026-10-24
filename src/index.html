@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="description" content="Landed – Trick-Tagebuch für deine Skate-Crew. Ohne Server, direkt von Handy zu Handy.">
+  <title>Landed</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+
+  <!-- Schriften: optional und nicht blockierend – ohne Netz greifen Systemschriften -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Permanent+Marker&family=Press+Start+2P&family=Righteous&family=Shrikhand&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <style>
+/*{{VENDOR_CSS}}*/
+  </style>
+  <style>
+/*{{CSS}}*/
+  </style>
+</head>
+<body data-theme="street" data-bg="scene">
+  <div id="bg" aria-hidden="true"></div>
+  <div id="bg-shade" aria-hidden="true"></div>
+
+  <section id="welcome" hidden></section>
+
+  <div id="app" hidden>
+    <header id="topbar">
+      <button id="crew-pill" class="pill"></button>
+      <button id="sess-pill" class="pill ok" hidden></button>
+      <span class="grow"></span>
+      <button id="btn-scan" class="round" title="QR scannen (Einladung, Kopplung, Umzug)" aria-label="QR scannen">📷</button>
+    </header>
+
+    <main id="main">
+      <section id="view-tricks" class="view"></section>
+      <section id="view-feed" class="view" hidden></section>
+      <section id="view-games" class="view" hidden></section>
+      <section id="view-spots" class="view" hidden></section>
+      <section id="view-me" class="view" hidden></section>
+    </main>
+
+    <nav id="tabbar">
+      <button data-tab="tricks" class="on"><span>🛹</span>Tricks</button>
+      <button data-tab="feed"><span>📣</span>Feed</button>
+      <button data-tab="games"><span>🎲</span>Spiele</button>
+      <button data-tab="spots"><span>📍</span>Spots</button>
+      <button data-tab="me"><span>😎</span>Ich</button>
+    </nav>
+  </div>
+
+  <div id="toasts" aria-live="polite"></div>
+
+  <script>
+/*{{VENDOR_JS}}*/
+  </script>
+  <script>
+/*{{JS}}*/
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "Landed – Trick-Tagebuch für deine Crew",
+  "short_name": "Landed",
+  "description": "Tricks abhaken, Crew-Feed, Game of S.K.A.T.E. – ohne Server, direkt von Handy zu Handy.",
+  "start_url": "./",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#111114",
+  "theme_color": "#111114",
+  "lang": "de",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
